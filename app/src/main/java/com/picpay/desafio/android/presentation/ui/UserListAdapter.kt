@@ -1,14 +1,15 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.presentation.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.picpay.desafio.android.data.remote.model.User
+import com.picpay.desafio.android.R
+import com.picpay.desafio.android.domain.model.UserDomain
 
 class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
 
-    var users = emptyList<User>()
+    var users = emptyList<UserDomain>()
         set(value) {
             val result = DiffUtil.calculateDiff(
                 UserListDiffCallback(
@@ -32,4 +33,26 @@ class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
     }
 
     override fun getItemCount(): Int = users.size
+}
+
+class UserListDiffCallback(
+    private val oldList: List<UserDomain>,
+    private val newList: List<UserDomain>
+) : DiffUtil.Callback() {
+
+    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        return oldList[oldItemPosition].username == newList[newItemPosition].username
+    }
+
+    override fun getOldListSize(): Int {
+        return oldList.size
+    }
+
+    override fun getNewListSize(): Int {
+        return newList.size
+    }
+
+    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        return true
+    }
 }

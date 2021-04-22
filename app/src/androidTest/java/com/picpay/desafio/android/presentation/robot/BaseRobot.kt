@@ -1,4 +1,4 @@
-package com.globo.search.presentation.ui
+package com.picpay.desafio.android.presentation.robot
 
 import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.assertion.ViewAssertions.matches

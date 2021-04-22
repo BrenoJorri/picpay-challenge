@@ -1,4 +1,4 @@
-package com.globo.search.rule
+package com.picpay.desafio.android.rule
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

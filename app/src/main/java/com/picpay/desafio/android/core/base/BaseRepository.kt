@@ -1,4 +1,4 @@
-package com.globo.architecture
+package com.picpay.desafio.android.core.base
 
 abstract class BaseRepository {
 

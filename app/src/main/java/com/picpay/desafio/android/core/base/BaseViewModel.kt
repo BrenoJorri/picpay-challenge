@@ -1,7 +1,8 @@
-package com.globo.architecture
+package com.picpay.desafio.android.core.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.picpay.desafio.android.core.Resource
 
 abstract class BaseViewModel : ViewModel() {
 

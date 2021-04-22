@@ -1,4 +1,4 @@
-package com.globo.architecture.internal
+package com.picpay.desafio.android.core.base
 
 interface BaseMapper {
 
